@@ -73,8 +73,8 @@ class Repository:
             
         for c in citizens:
             cursor.execute("""
-                INSERT INTO citizens (citizen_id, first_name, last_name, age, gender, health_condition, category) 
-                VALUES (?, ?, ?, ?, ?, ?, ?)
+                INSERT INTO citizens (citizen_id, first_name, last_name, age, gender, health_condition, category, registered_at) 
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
             """, c)
             
         self.conn.commit()
